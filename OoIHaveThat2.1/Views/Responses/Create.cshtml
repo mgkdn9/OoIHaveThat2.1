@@ -1,0 +1,58 @@
+﻿@model OoIHaveThat2._1.Models.Response
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Response</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="SeekerUserId" class="control-label"></label>
+                <input asp-for="SeekerUserId" class="form-control" />
+                <span asp-validation-for="SeekerUserId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OwnerUserId" class="control-label"></label>
+                <input asp-for="OwnerUserId" class="form-control" />
+                <span asp-validation-for="OwnerUserId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ToolRequestId" class="control-label"></label>
+                <input asp-for="ToolRequestId" class="form-control" />
+                <span asp-validation-for="ToolRequestId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PriceCounterOffer" class="control-label"></label>
+                <input asp-for="PriceCounterOffer" class="form-control" />
+                <span asp-validation-for="PriceCounterOffer" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PriceCounterOfferCounter" class="control-label"></label>
+                <input asp-for="PriceCounterOfferCounter" class="form-control" />
+                <span asp-validation-for="PriceCounterOfferCounter" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DistanceBetween" class="control-label"></label>
+                <input asp-for="DistanceBetween" class="form-control" />
+                <span asp-validation-for="DistanceBetween" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
