@@ -11,5 +11,7 @@ namespace OoIHaveThat2._1.Data
         {
         }
         public DbSet<OoIHaveThat2._1.Models.Response> Response { get; set; } = default!;
+        public DbSet<OoIHaveThat2._1.Models.ToolRequest> ToolRequest { get; set; } = default!;
+        public DbSet<OoIHaveThat2._1.Models.User> User { get; set; } = default!;
     }
 }

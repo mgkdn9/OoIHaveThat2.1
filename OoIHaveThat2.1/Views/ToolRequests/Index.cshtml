@@ -1,0 +1,77 @@
+﻿@model IEnumerable<OoIHaveThat2._1.Models.ToolRequest>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index ToolRequests</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.SeekerId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedAt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TimeNeededFor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PriceFirstOffer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PictureUrl)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PictureAsByteArr)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.SeekerId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedAt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TimeNeededFor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PriceFirstOffer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PictureUrl)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PictureAsByteArr)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
